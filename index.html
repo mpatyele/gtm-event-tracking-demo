@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTM Event Tracking Demo</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PW7ZQTHT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PW7ZQTHT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="hero">
+      <nav>
+        <h2>GTM Tracking Demo</h2>
+        <a href="#tracking-section">View Events</a>
+      </nav>
+
+      <section class="hero-content">
+        <p class="eyebrow">Digital Advertising / Tracking Practice</p>
+        <h1>Google Tag Manager Event Tracking Demo</h1>
+        <p>
+          A simple landing page built to practice Google Tag Manager installation,
+          click tracking, conversion events, and dataLayer pushes.
+        </p>
+
+        <div class="button-group">
+          <button id="signup-button" class="primary-button">
+            Sign Up
+          </button>
+
+          <button id="purchase-button" class="secondary-button">
+            Buy Now
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="tracking-section" class="card-section">
+        <article class="card">
+          <h3>Lead Event</h3>
+          <p>
+            The Sign Up button simulates a lead conversion event.
+          </p>
+          <code>event: lead_button_click</code>
+        </article>
+
+        <article class="card">
+          <h3>Purchase Event</h3>
+          <p>
+            The Buy Now button simulates a purchase intent event.
+          </p>
+          <code>event: purchase_button_click</code>
+        </article>
+
+        <article class="card">
+          <h3>External Link</h3>
+          <p>
+            This link can be used to practice outbound click tracking.
+          </p>
+          <a href="https://www.google.com" id="external-link" target="_blank">
+            Visit External Website
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for Google Tag Manager tracking practice.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
